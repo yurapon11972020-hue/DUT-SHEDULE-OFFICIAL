@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: dut-saas
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: COOKIE_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: yurapon11972020@gmail.com
+      - key: ADMIN_PASSWORD
+        value: "1488675242"
+      # If you attach a paid Persistent Disk, set DATA_DIR to the disk path, for example /var/data.
+      # On a free Render web service, filesystem writes can reset after redeploy/restart.
