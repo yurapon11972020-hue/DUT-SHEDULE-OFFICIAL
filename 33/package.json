@@ -1,0 +1,13 @@
+{
+  "name": "dut-saas-v32-mobile-real-fix",
+  "version": "1.3.2",
+  "private": true,
+  "description": "DUT SaaS with admin panel, public deployment config and real mobile modal scrolling and compact phone UI fixes.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
