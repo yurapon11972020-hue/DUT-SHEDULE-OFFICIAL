@@ -1,0 +1,12 @@
+services:
+  dut:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      COOKIE_SECRET: "change_this_secret_before_production"
+    volumes:
+      - dut_data:/app/data
+
+volumes:
+  dut_data:
